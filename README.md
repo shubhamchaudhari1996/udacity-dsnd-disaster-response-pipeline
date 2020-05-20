@@ -176,8 +176,6 @@ As we can see the data is highly imbalanced. Though the accuracy metric is [high
 .
 ├── app
 │   ├── run.py------------------------# FLASK FILE THAT RUNS APP
-│   ├── static
-│   │   └── favicon.ico---------------# FAVICON FOR THE WEB APP
 │   └── templates
 │       ├── go.html-------------------# CLASSIFICATION RESULT PAGE OF WEB APP
 │       └── master.html---------------# MAIN PAGE OF WEB APP

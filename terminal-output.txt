@@ -1,0 +1,100 @@
+Loading data...
+    DATABASE: /home/workspace/data/DisasterResponse.db
+Building model...
+Training model...
+Fitting 3 folds for each of 4 candidates, totalling 12 fits
+[CV] vect__max_df=0.75, vect__ngram_range=(1, 1) .....................
+[CV]  vect__max_df=0.75, vect__ngram_range=(1, 1), score=0.27134887712773564, total=  17.7s
+[Parallel(n_jobs=1)]: Done   1 out of   1 | elapsed:   26.7s remaining:    0.0s
+[CV] vect__max_df=0.75, vect__ngram_range=(1, 1) .....................
+[CV]  vect__max_df=0.75, vect__ngram_range=(1, 1), score=0.28965813188385064, total=  15.4s
+[Parallel(n_jobs=1)]: Done   2 out of   2 | elapsed:   51.0s remaining:    0.0s
+[CV] vect__max_df=0.75, vect__ngram_range=(1, 1) .....................
+[CV]  vect__max_df=0.75, vect__ngram_range=(1, 1), score=0.26623748211731046, total=  15.5s
+[CV] vect__max_df=0.75, vect__ngram_range=(1, 2) .....................
+[CV]  vect__max_df=0.75, vect__ngram_range=(1, 2), score=0.286082105564297, total=  18.7s
+[CV] vect__max_df=0.75, vect__ngram_range=(1, 2) .....................
+[CV]  vect__max_df=0.75, vect__ngram_range=(1, 2), score=0.29337719925618655, total=  18.5s
+[CV] vect__max_df=0.75, vect__ngram_range=(1, 2) .....................
+[CV]  vect__max_df=0.75, vect__ngram_range=(1, 2), score=0.2811158798283262, total=  18.7s
+[CV] vect__max_df=1.0, vect__ngram_range=(1, 1) ......................
+[CV]  vect__max_df=1.0, vect__ngram_range=(1, 1), score=0.27134887712773564, total=  15.6s
+[CV] vect__max_df=1.0, vect__ngram_range=(1, 1) ......................
+[CV]  vect__max_df=1.0, vect__ngram_range=(1, 1), score=0.28965813188385064, total=  15.4s
+[CV] vect__max_df=1.0, vect__ngram_range=(1, 1) ......................
+[CV]  vect__max_df=1.0, vect__ngram_range=(1, 1), score=0.26623748211731046, total=  15.4s
+[CV] vect__max_df=1.0, vect__ngram_range=(1, 2) ......................
+[CV]  vect__max_df=1.0, vect__ngram_range=(1, 2), score=0.286082105564297, total=  18.7s
+[CV] vect__max_df=1.0, vect__ngram_range=(1, 2) ......................
+[CV]  vect__max_df=1.0, vect__ngram_range=(1, 2), score=0.29337719925618655, total=  18.4s
+[CV] vect__max_df=1.0, vect__ngram_range=(1, 2) ......................
+[CV]  vect__max_df=1.0, vect__ngram_range=(1, 2), score=0.2811158798283262, total=  18.5s
+[Parallel(n_jobs=1)]: Done  12 out of  12 | elapsed:  5.3min finished
+Evaluating model...
+                        precision    recall  f1-score   support
+
+               related       0.85      0.95      0.90      4004
+               request       0.76      0.66      0.71       897
+                 offer       0.00      0.00      0.00        24
+           aid_related       0.72      0.77      0.74      2253
+          medical_help       0.61      0.36      0.46       442
+      medical_products       0.66      0.32      0.43       270
+     search_and_rescue       0.69      0.19      0.30       149
+              security       0.25      0.01      0.02       100
+              military       0.60      0.37      0.46       205
+           child_alone       0.00      0.00      0.00         0
+                 water       0.74      0.68      0.71       360
+                  food       0.82      0.77      0.80       610
+               shelter       0.76      0.62      0.69       477
+              clothing       0.70      0.45      0.55        82
+                 money       0.62      0.27      0.37       116
+        missing_people       0.55      0.10      0.17        60
+              refugees       0.51      0.17      0.26       176
+                 death       0.73      0.47      0.58       262
+             other_aid       0.50      0.23      0.31       705
+infrastructure_related       0.31      0.06      0.10       342
+             transport       0.71      0.25      0.37       248
+             buildings       0.65      0.41      0.50       276
+           electricity       0.63      0.29      0.39       108
+                 tools       0.00      0.00      0.00        32
+             hospitals       0.50      0.03      0.06        65
+                 shops       0.00      0.00      0.00        23
+           aid_centers       0.00      0.00      0.00        59
+  other_infrastructure       0.29      0.03      0.06       229
+       weather_related       0.79      0.75      0.77      1449
+                floods       0.86      0.54      0.67       426
+                 storm       0.74      0.64      0.69       481
+                  fire       0.82      0.32      0.46        57
+            earthquake       0.87      0.74      0.80       486
+                  cold       0.58      0.37      0.45        94
+         other_weather       0.51      0.11      0.18       276
+         direct_report       0.68      0.54      0.60      1058
+
+           avg / total       0.72      0.64      0.66     16901
+
+Accuracy: 0.9500328417662514
+Saving model...
+    MODEL: /home/workspace/models/classifier.pkl
+Trained model saved!
+root@bb03906ba64e:/home/workspace/app# python run.py 
+ * Running on http://0.0.0.0:3001/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 291-862-946
+['water',
+ 'people',
+ 'help',
+ 'food',
+ 'need',
+ 'please',
+ 'say',
+ 'earthquake',
+ 'like',
+ 'would']
+172.18.0.1 - - [20/May/2020 17:12:13] "GET / HTTP/1.1" 200 -
+/opt/conda/lib/python3.6/site-packages/sklearn/externals/joblib/parallel.py:547: UserWarning:
+
+Multiprocessing-backed parallel loops cannot be nested below threads, setting n_jobs=1
+
+172.18.0.1 - - [20/May/2020 17:15:51] "GET /go?query=We+are+in+trouble%2C+all+of+them+are+4+people.+All+the+need+Food+and+Water. HTTP/1.1" 200 -
+172.18.0.1 - - [20/May/2020 17:22:57] "GET /go?query=We+are+in+trouble%2C+all+of+them+are+4+people.+All+we+need+Food+and+Water. HTTP/1.1" 200 -
